@@ -1,0 +1,26 @@
+version: 'latest'
+
+services:
+  git-template-sync:
+    build:
+      context: ../
+      dockerfile: Dockerfile
+      target: production # switch between production and development
+      tags:
+        - git-template-sync:latest # give your image a name and tag
+      args:
+        USER: user # the user name
+        USER_PASSWORD: password # the user password
+        USER_SUDO_ENABLED: true # enable sudo for the user
+        GROUP_NAME: user # the group name
+        UID: 1000
+        GID: 1000
+        WORKSPACE_DIR: /workspace
+        PYTHNON_VERSION: 3.12
+        POETRY_HOME: /poetry
+    container_name: git-template-sync
+    environment:
+      ZSH_THEME: agnoster
+      POETRY_VIRTUALENVS_IN_PROJECT: true
+    volumes:
+      - ../:/workspace

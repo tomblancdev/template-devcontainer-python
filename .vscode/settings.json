@@ -1,0 +1,14 @@
+{
+    "cSpell.words": [
+        "Autocompletes",
+        "azuretools",
+        "devcontainer",
+        "errorlens",
+        "kohler",
+        "usernamehw"
+    ],
+    "errorLens.enabledDiagnosticLevels": [
+        "error",
+        "warning"
+    ]
+}

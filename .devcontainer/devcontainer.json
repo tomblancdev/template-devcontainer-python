@@ -1,0 +1,26 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/alpine
+{
+	"name": "Sync your template with a Git repository",
+	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+	"dockerComposeFile": [
+		"docker-compose.dev.yaml"
+	],
+	"service": "git-template-sync",
+	"workspaceFolder": "/workspace",
+
+	"postCreateCommand": "bash .devcontainer/post-create.sh",
+
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-azuretools.vscode-docker", // Enable Docker linting, debugging, and more
+				"aaron-bond.better-comments", // Enhance your code comments
+				"streetsidesoftware.code-spell-checker", // Catch typos and spelling errors in your code
+				"usernamehw.errorlens", // Improve highlighting of errors, warnings, and other language diagnostics
+				"christian-kohler.path-intellisense", // Autocompletes filenames
+				"github.vscode-pull-request-github" // Review and manage GitHub pull requests in Visual Studio Code
+			]
+		}
+	}
+}
