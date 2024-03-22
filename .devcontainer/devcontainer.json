@@ -6,11 +6,9 @@
 	"dockerComposeFile": [
 		"docker-compose.dev.yaml"
 	],
-	"service": "git-template-sync",
+	"service": "template-devcontainer-python",
 	"workspaceFolder": "/workspace",
-
 	"postCreateCommand": "bash .devcontainer/post-create.sh",
-
 	"customizations": {
 		"vscode": {
 			"extensions": [

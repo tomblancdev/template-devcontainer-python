@@ -1,13 +1,13 @@
 version: 'latest'
 
 services:
-  git-template-sync:
+  template-devcontainer-python:
     build:
       context: ../
       dockerfile: Dockerfile
       target: development
       tags:
-        - git-template-sync:latest
+        - template-devcontainer-python:latest
       args:
         USER: user # the user name
         USER_PASSWORD: password # the user password
@@ -18,7 +18,7 @@ services:
         WORKSPACE_DIR: /workspace
         PYTHNON_VERSION: 3.12
         POETRY_HOME: /poetry
-    container_name: git-template-sync
+    container_name: template-devcontainer-python
     environment:
       ZSH_THEME: agnoster
       POETRY_VIRTUALENVS_IN_PROJECT: true
