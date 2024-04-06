@@ -37,6 +37,8 @@
 						"source.fixAll": "explicit"
 					}
 				},
+				"python.terminal.activateEnvInCurrentTerminal": true,
+				"python.terminal.activateEnvironment": true,
 				// ___ Mypy settings ___
 				"mypy-type-checker.reportingScope": "workspace",
 				"mypy-type-checker.preferDaemon": true,
