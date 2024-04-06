@@ -3,7 +3,22 @@ repos:
   rev: v4.5.0
   hooks:
   - id: check-yaml
+  - id: check-toml
   - id: end-of-file-fixer
   - id: trailing-whitespace
   - id: detect-private-key
   - id: no-commit-to-branch
+
+- repo: https://github.com/astral-sh/ruff-pre-commit
+  # Ruff version.
+  rev: v0.3.5
+  hooks:
+  # Run the linter.
+  - id: ruff
+  # Run the formatter.
+  - id: ruff-format
+
+- repo: https://github.com/pre-commit/mirrors-mypy
+  rev: 'v1.9.0'  # Use the sha / tag you want to point at
+  hooks:
+  - id: mypy
