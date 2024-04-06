@@ -18,6 +18,7 @@
 				"usernamehw.errorlens", // Improve highlighting of errors, warnings, and other language diagnostics
 				"christian-kohler.path-intellisense", // Autocompletes filenames
 				"github.vscode-pull-request-github", // Review and manage GitHub pull requests in Visual Studio Code
+				"tamasfe.even-better-toml", // TOML language support
 				"github.copilot", // AI pair programmer
 				"ms-python.python", // Python language support
 				"charliermarsh.ruff", // Ruff linter for Python
