@@ -1,7 +1,7 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the
 // README at: https://github.com/devcontainers/templates/tree/main/src/alpine
 {
-	"name": "Sync your template with a Git repository",
+	"name": "Python Devcontainer Template",
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
 	"dockerComposeFile": [
 		"docker-compose.dev.yaml"
@@ -17,8 +17,38 @@
 				"streetsidesoftware.code-spell-checker", // Catch typos and spelling errors in your code
 				"usernamehw.errorlens", // Improve highlighting of errors, warnings, and other language diagnostics
 				"christian-kohler.path-intellisense", // Autocompletes filenames
-				"github.vscode-pull-request-github" // Review and manage GitHub pull requests in Visual Studio Code
-			]
+				"github.vscode-pull-request-github", // Review and manage GitHub pull requests in Visual Studio Code
+				"tamasfe.even-better-toml", // TOML language support
+				"github.copilot", // AI pair programmer
+				"ms-python.python", // Python language support
+				"charliermarsh.ruff", // Ruff linter for Python
+				"ms-python.mypy-type-checker" // Mypy type checker for Python
+			],
+			"settings": {
+				// ### Python settings ###
+				"[python]": {
+					"editor.wordBasedSuggestions": "off",
+					"editor.tabSize": 4,
+					"editor.formatOnSave": true,
+					"editor.formatOnSaveMode": "file",
+					"editor.defaultFormatter": "charliermarsh.ruff",
+					"editor.codeActionsOnSave": {
+						"source.organizeImports": "explicit",
+						"source.fixAll": "explicit"
+					}
+				},
+				// ___ Mypy settings ___
+				"mypy-type-checker.reportingScope": "workspace",
+				"mypy-type-checker.preferDaemon": true,
+				"mypy-type-checker.importStrategy": "fromEnvironment",
+				//  ___ Ruff settings ___
+				"ruff.enable": true,
+				"ruff.fixAll": true,
+				"ruff.importStrategy": "fromEnvironment",
+				"ruff.lint.enable": true,
+				"ruff.lint.run": "onSave",
+				"ruff.organizeImports": true
+			}
 		}
 	}
 }
