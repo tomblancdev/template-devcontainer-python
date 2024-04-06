@@ -2,6 +2,7 @@ version: 'latest'
 
 services:
   template-devcontainer-python:
+    container_name: template-devcontainer-python
     build:
       context: ../
       dockerfile: Dockerfile
@@ -18,7 +19,6 @@ services:
         WORKSPACE_DIR: /workspace
         PYTHNON_VERSION: 3.12
         POETRY_HOME: /poetry
-    container_name: template-devcontainer-python
     environment:
       ZSH_THEME: agnoster
       POETRY_VIRTUALENVS_IN_PROJECT: true

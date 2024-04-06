@@ -2,9 +2,11 @@
     "cSpell.words": [
         "Autocompletes",
         "azuretools",
+        "charliermarsh",
         "devcontainer",
         "errorlens",
         "kohler",
+        "mypy",
         "usernamehw"
     ],
     "errorLens.enabledDiagnosticLevels": [
